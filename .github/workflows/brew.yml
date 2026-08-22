@@ -18,6 +18,6 @@ jobs:
 
       - name: Test Local Tap and Install
         run: |
-          # Tap your current working directory as a local tap named after your repo
           brew tap --force darnellwashingtonjr94-art/xtractor .
+          brew trust --formula darnellwashingtonjr94-art/xtractor/sandb0x-xtract0r
           brew install sandb0x-xtract0r
