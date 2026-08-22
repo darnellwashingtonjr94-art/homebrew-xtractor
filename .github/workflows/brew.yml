@@ -16,5 +16,8 @@ jobs:
       - name: Audit Formula
         run: brew audit --type=formula ./Formula/sandb0x-xtract0r.rb || true
 
-      - name: Install Formula
-        run: brew install --build-from-source ./Formula/sandb0x-xtract0r.rb
+      - name: Test Local Tap and Install
+        run: |
+          # Tap your current working directory as a local tap named after your repo
+          brew tap --force darnellwashingtonjr94-art/xtractor .
+          brew install sandb0x-xtract0r
