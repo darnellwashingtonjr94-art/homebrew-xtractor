@@ -6,13 +6,9 @@ class Sandb0xXtract0r < Formula
   license "MIT"
 
   depends_on "rust" => :build
-  depends_on "python@3.11"
-  depends_on "docker"
 
   def install
-    system "cargo", "build", "--release"
-    bin.install "target/release/main" => "sandb0x-xtract0r"
-    libexec.install Dir["*"]
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
