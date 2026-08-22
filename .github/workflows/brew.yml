@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Audit Formula
-        run: brew audit --type=formula ./sandb0x-xtractor.rb || true
+        run: brew audit --type=formula ./Formula/sandb0x-xtract0r.rb || true
 
       - name: Install Formula
-        run: brew install --build-from-source ./sandb0x-xtractor.rb
+        run: brew install --build-from-source ./Formula/sandb0x-xtract0r.rb
