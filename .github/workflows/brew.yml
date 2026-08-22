@@ -17,8 +17,7 @@ jobs:
         run: brew audit --type=formula ./Formula/sandb0x-xtract0r.rb || true
 
       - name: Test Local Tap and Install
-        env:
-          HOMEBREW_NO_TAP_TRUST: "1"
         run: |
-          brew tap --force darnellwashingtonjr94-art/xtractor .
-          brew install sandb0x-xtract0r
+          mkdir -p /opt/homebrew/Library/Taps/darnellwashingtonjr94/homebrew-xtractor
+          cp -r . /opt/homebrew/Library/Taps/darnellwashingtonjr94/homebrew-xtractor
+          brew install darnellwashingtonjr94/xtractor/sandb0x-xtract0r
