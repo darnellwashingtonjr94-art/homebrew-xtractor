@@ -18,6 +18,6 @@ jobs:
 
       - name: Test Local Tap and Install
         run: |
-          mkdir -p /opt/homebrew/Library/Taps/darnellwashingtonjr94/homebrew-xtractor
-          cp -r . /opt/homebrew/Library/Taps/darnellwashingtonjr94/homebrew-xtractor
+          mkdir -p $(brew --repo)/Library/Taps/darnellwashingtonjr94/homebrew-xtractor
+          cp -r . $(brew --repo)/Library/Taps/darnellwashingtonjr94/homebrew-xtractor
           brew install darnellwashingtonjr94/xtractor/sandb0x-xtract0r
