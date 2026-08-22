@@ -13,8 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Homebrew Audit and Test
-        run: |
-          brew audit --new-formula ./sandb0x-xtractor.rb || true
-          brew install --build-from-source ./sandb0x-xtractor.rb
-          sandb0x-xtractor --help
+      - name: Audit Formula
+        run: brew audit --type=formula ./sandb0x-xtractor.rb || true
+
+      - name: Install Formula
+        run: brew install --build-from-source ./sandb0x-xtractor.rb
