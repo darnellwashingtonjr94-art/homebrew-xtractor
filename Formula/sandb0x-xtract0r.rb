@@ -2,7 +2,7 @@ class Sandb0xXtract0r < Formula
   desc "Automated cross-platform security analysis engine for malicious binaries"
   homepage "https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r"
   url "https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 :no_check
+  sha256 "937d0d10d83f5ba120ea6b97d0d81b3f5ba120ea6b97d0d81b3f5ba120ea6b" # Use your exact generated sha256 hash here
   license "MIT"
 
   depends_on "rust" => :build
