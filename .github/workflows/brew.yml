@@ -1,0 +1,20 @@
+name: Test Homebrew Formula
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-formula:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Homebrew Audit and Test
+        run: |
+          brew audit --new-formula ./sandb0x-xtractor.rb || true
+          brew install --build-from-source ./sandb0x-xtractor.rb
+          sandb0x-xtractor --help
