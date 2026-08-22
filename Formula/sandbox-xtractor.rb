@@ -1,4 +1,4 @@
-class Sandb0xtractor < Formula
+class Sandb0xXtractor < Formula
   desc "Automated cross-platform security analysis engine for malicious binaries"
   homepage "https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r"
   url "https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/archive/refs/tags/v0.1.0.tar.gz"
