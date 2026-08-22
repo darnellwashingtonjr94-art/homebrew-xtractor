@@ -1,7 +1,7 @@
-class SandboxXtractor < Formula
+class Sandb0xtractor < Formula
   desc "Automated cross-platform security analysis engine for malicious binaries"
   homepage "https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r"
-  url "https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/archive/refs/tags/v0.10.0.tar.gz"
+  url "https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/archive/refs/tags/v0.1.0.tar.gz"
   sha256 :no_check
   license "MIT"
 
@@ -11,11 +11,11 @@ class SandboxXtractor < Formula
 
   def install
     system "cargo", "build", "--release"
-    bin.install "target/release/main" => "sandbox-xtractor"
+    bin.install "target/release/main" => "sandb0x-xtractor"
     libexec.install Dir["*"]
   end
 
   test do
-    system "#{bin}/sandbox-xtractor", "--help"
+    system "#{bin}/sandb0x-xtractor", "--help"
   end
 end
