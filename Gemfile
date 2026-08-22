@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 
-gemspec
+gemspec name: "sandb0x-xtractor"
